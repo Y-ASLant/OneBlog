@@ -30,6 +30,8 @@ foreach ($domains as $domain): ?>
 </title>
 <link href="<?php $this->options->themeUrl('/static/sdk/animate.compat.css'); ?>" rel="stylesheet"><!--动画效果-->
 <link href="//at.alicdn.com/t/c/font_3940454_drimor4umam.css" rel="stylesheet"/><!---图标库 iconfont.cn -->
+<!-- Code font: JetBrains Mono via jsDelivr (CN-friendly) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono/index.css" />
 <?php if ($this->is('index')):?>
 <link rel="stylesheet" href="<?php $this->options->themeUrl('/static/sdk/swiper/swiper-bundle.min.css'); ?>" /><!--轮播图-->
 <?php endif;?>

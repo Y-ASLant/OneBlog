@@ -128,6 +128,7 @@ html {
     width: 100%;
     padding: 0;
     -webkit-font-smoothing: antialiased;
+    font-family: "MiSans VF", "MiSans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
     background-image: url(../img/body.jpg);
     background-position: left top;
     background-size: auto;
@@ -1939,11 +1940,17 @@ html.night .page_thumb:hover {
 }
 
 /**代码格式化**/
-pre {
+pre {font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     overflow-x: auto;
     margin-bottom: 30px;
     position: relative;
 }
+
+/* Inline code and similar elements use JetBrains Mono */
+code, kbd, samp {
+    font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 
 .code-copy-btn {
     position: absolute;
@@ -1968,7 +1975,7 @@ pre:hover .code-copy-btn {
     background: rgba(0, 0, 0, 0.7);
 }
 
-pre code{
+pre code{font-family: "JetBrains Mono", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     display:block;
     overflow-x:auto;
     padding:1em;
