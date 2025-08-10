@@ -33,18 +33,40 @@ html.night {
     --bg-button:color-mix(in srgb, var(--theme-color) 60%, black);/**调制主题背景色**/
 }
 
-/**添加模式切换过渡动画**/
-html {
-    transition: background-color 0.5s ease, color 0.5s ease;
+/**夜间模式图片遮罩**/
+html.night img:not(.fancybox-image):not(.fancybox-spaceball) {
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
 }
 
-* {
-    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
+html.night img:hover:not(.fancybox-image):not(.fancybox-spaceball) {
+    filter: brightness(1);
+}
+
+/**夜间模式背景图遮罩**/
+html.night .post_bg,
+html.night .post_img,
+html.night .banner-thumb,
+html.night .page_thumb {
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+html.night .post_bg:hover,
+html.night .post_img:hover,
+html.night .banner-thumb:hover,
+html.night .page_thumb:hover {
+    filter: brightness(1);
 }
 
 /**主容器边框处理**/
 .night .main {
     box-shadow: none;
+}
+
+/**添加夜间模式切换过渡动画**/
+html {
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 * {
@@ -150,6 +172,7 @@ p {
     line-height: 2em;
     text-align: justify;
     margin-bottom: 2em;
+    word-break: break-all;
 }
 
 /**引用样式**/
@@ -1487,6 +1510,7 @@ li .respond {
     -webkit-animation-fill-mode: initial;
     animation-fill-mode: initial;
     border-bottom: 1px solid var(--bg-input);
+    transition:none;
 }
 
 .comment-list li:last-child {
@@ -1913,30 +1937,6 @@ textarea {
     border-radius: 4px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-/**夜间模式图片遮罩**/
-html.night img {
-    filter: brightness(0.8);
-    transition: filter 0.3s ease;
-}
-
-html.night img:hover {
-    filter: brightness(1);
-}
-
-/**夜间模式背景图遮罩**/
-html.night .post_bg,
-html.night .banner-thumb,
-html.night .page_thumb {
-    filter: brightness(0.8);
-    transition: filter 0.3s ease;
-}
-
-html.night .post_bg:hover,
-html.night .banner-thumb:hover,
-html.night .page_thumb:hover {
-    filter: brightness(1);
 }
 
 /**代码格式化**/
